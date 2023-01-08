@@ -1,0 +1,33 @@
+$color-primary: #141414;
+$color-secondary: #212121;
+$color-accent: #363636;
+$color-tertiary: #747474;
+
+$color-success: #00adb5;
+$color-error: #ff2e63;
+$color-info: #3f5ee7;
+$color-info-transparent: rgba(63, 94, 231, 0.5);
+$color-info-dark: #3351d1;
+
+$color-white: #eeeeee;
+$color-black: #141414;
+
+$color-blur-bg: linear-gradient(
+  180deg,
+  rgba(54, 54, 54, 0.5) 0%,
+  rgba(54, 54, 54, 0) 100%
+);
+
+$fs-title-1: 2.25rem;
+$fs-title-2: 1.5rem;
+$fs-text-primary: 1rem;
+$fs-text-caption: 0.875rem;
+$fs-text-mini: 0.75rem;
+
+$lh-default: 120%;
+
+$blur-default: blur(5px);
+
+$transition-duration-default: 0.2s;
+
+$focus-primary: 0 0 0 0.35rem $color-info-transparent;

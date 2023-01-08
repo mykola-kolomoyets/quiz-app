@@ -1,0 +1,39 @@
+@import "./../../../variables.scss";
+
+.wrapper {
+  width: 100%;
+}
+
+.field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.optionsWrapper {
+  max-height: 20rem;
+  overflow-y: auto;
+  box-shadow: inset 1rem $color-blur-bg;
+}
+
+.option {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color $transition-duration-default ease;
+
+  &:hover {
+    background-color: $color-primary;
+  }
+
+  & + & {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  &.active {
+    background-color: $color-info-dark;
+  }
+}

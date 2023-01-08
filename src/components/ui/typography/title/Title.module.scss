@@ -1,0 +1,13 @@
+@import "./../../../../variables.scss";
+
+.wrapper {
+  line-height: $lh-default;
+}
+
+.primary {
+  font-size: $fs-title-1;
+}
+
+.secondary {
+  font-size: $fs-title-2;
+}

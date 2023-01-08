@@ -1,0 +1,76 @@
+@import "./../../../variables.scss";
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  backdrop-filter: blur(2px);
+}
+
+.backdrop::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(5, 2, 15, 0.9);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@supports (overscroll-behavior-block: contain) {
+  .inner {
+    overscroll-behavior-block: contain;
+  }
+}
+
+.box {
+  color: $color-white;
+  background-color: $color-secondary;
+  border-radius: 1.43rem;
+  padding: 30px min(35px, 7vw) 40px;
+  width: 100%;
+  max-width: 470px;
+  margin: auto;
+}
+
+.box.top {
+  margin-top: 84px;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.625rem;
+}
+
+.btnClose {
+  flex-shrink: 0;
+  margin-left: 0.625rem;
+  transform: translateY(4px);
+}
+
+.btnClose svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .box.top {
+    margin-top: 92px;
+  }
+}

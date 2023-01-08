@@ -1,0 +1,52 @@
+@import "./reset.scss";
+@import "./variables.scss";
+
+*,
+*::after,
+*::before {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: $color-primary;
+}
+
+.focus-outline:focus-visible {
+  outline: none;
+  box-shadow: $focus-primary;
+}
+
+@supports not selector(:focus-visible) {
+  .focus-outline:focus {
+    outline: none;
+    box-shadow: $focus-primary;
+  }
+}
+
+.white {
+  color: $color-white;
+}
+
+.black {
+  color: $color-black;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}

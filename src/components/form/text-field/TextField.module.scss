@@ -1,0 +1,16 @@
+@import "./../../../variables.scss";
+
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  margin-top: 0.75rem;
+  padding: 0.875rem 1rem;
+  border-radius: 0.375rem;
+  background-color: $color-secondary;
+  border: 1px solid $color-accent;
+  color: $color-white;
+}

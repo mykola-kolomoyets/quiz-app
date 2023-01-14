@@ -13,4 +13,18 @@
   background-color: $color-secondary;
   border: 1px solid $color-accent;
   color: $color-white;
+  transition: border-color $transition-duration-default ease;
+
+  &.error {
+    border-color: $color-error;
+  }
+
+  &.success {
+    border-color: $color-success;
+  }
+}
+
+.errorMessage {
+  color: $color-error;
+  margin-top: 0.5rem;
 }

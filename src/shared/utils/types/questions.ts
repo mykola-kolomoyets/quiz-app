@@ -1,4 +1,4 @@
-type QuestionVariant = {
+export type QuestionVariant = {
   label: string;
   value: string;
 };
@@ -10,4 +10,5 @@ export type Question = {
   imageUrl?: string;
   answersVariants?: QuestionVariant[];
   correctAnswer: QuestionVariant | string;
+  explanation: string;
 };

@@ -1,7 +1,7 @@
 {
   "name": "quiz-app",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^3.0.1",
+    "axios": "^1.2.2",
     "clsx": "^1.2.1",
     "framer-motion": "^8.2.4",
     "localforage": "^1.10.0",
@@ -17,10 +18,11 @@
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.2",
     "react-router-dom": "^6.6.1",
     "react-wrap-balancer": "^0.3.0",
     "sort-by": "^1.2.0",
-    "zustand": "^4.2.0"
+    "zustand": "^4.3.2"
   },
   "devDependencies": {
     "@craco/craco": "^7.0.0",

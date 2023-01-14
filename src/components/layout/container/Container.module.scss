@@ -1,8 +1,9 @@
 @import "./../../../variables.scss";
 
 .wrapper {
-  width: clamp(375px, 100%, 500px);
+  position: relative;
+  width: clamp(320px, 100%, 500px);
   margin: 0 auto;
   padding: 0 2rem;
-  height: calc(100vh);
+  height: 100vh;
 }

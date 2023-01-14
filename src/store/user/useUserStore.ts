@@ -1,4 +1,4 @@
-import create from "zustand";
+import { create } from "zustand";
 import { UserStore } from "./models";
 
 export const useUserStore = create<UserStore>((set, get) => {

@@ -1,0 +1,27 @@
+@import "./../../../variables.scss";
+
+.wrapper {
+  position: absolute;
+  top: 2rem;
+  width: calc(100% - 4rem);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+
+  &.success {
+    background-color: $color-success;
+    box-shadow: 0px 2px 10px $color-success;
+  }
+
+  &.error {
+    background-color: $color-error;
+    box-shadow: 0px 2px 10px $color-error;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
+  }
+
+  .subtitle {
+    margin-bottom: 0.5rem;
+  }
+}

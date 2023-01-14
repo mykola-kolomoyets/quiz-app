@@ -7,8 +7,20 @@
   font-family: "Raleway", sans-serif;
 }
 
-body {
+html,
+body,
+[id="root"] {
   background-color: $color-primary;
+  min-height: 100vh;
+}
+
+@supports (-webkit-touch-callout: none) {
+  body,
+  html,
+  [id="root"] {
+    /* The hack for Safari */
+    height: -webkit-fill-available;
+  }
 }
 
 .focus-outline:focus-visible {

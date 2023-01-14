@@ -12,10 +12,11 @@ type TextFieldProps = {
   label: string;
   errorMessage?: string;
   additionalClasses?: string;
+  status?: "error" | "success";
 } & DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 
 const TextField = forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
-  const { label, errorMessage, additionalClasses, ...rest } = props;
+  const { label, errorMessage, additionalClasses, status, ...rest } = props;
 
   return (
     <div
@@ -28,8 +29,21 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
           {label}
         </Text>
 
-        <input ref={ref} className={clsx(s.field, "focus-outline")} {...rest} />
+        <input
+          ref={ref}
+          className={clsx(s.field, "focus-outline", {
+            [s.success]: status && status === "success",
+            [s.error]: !!errorMessage || (status && status === "error"),
+          })}
+          {...rest}
+        />
       </label>
+
+      {errorMessage ? (
+        <Text className={s.errorMessage} view="caption" weight="regular">
+          {errorMessage}
+        </Text>
+      ) : null}
     </div>
   );
 });
